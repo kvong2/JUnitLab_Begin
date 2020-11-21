@@ -29,4 +29,15 @@ public class GiftCardTest
 		card = new GiftCard(issuingStore, balance);
 		assertEquals("getIssuingStore()", issuingStore, card.getIssuingStore(), 0.001);
 	}
+	@Test
+	public void deduct()
+	{
+		double balance;
+		GiftCard card;
+		int issuingStore;
+		issuingStore = 1337;
+		balance = 100.00;
+		card = new GiftCard(issuingStore, balance);
+		card.deduct();
+	}
 }
